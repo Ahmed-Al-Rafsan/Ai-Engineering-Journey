@@ -1,11 +1,11 @@
 <div align="center">
 
-# 🚀 Data-to-AI
+# 🚀 AI Engineering Journey
 
 **My journey from Data Analyst to AI Engineer — built in public, one project at a time.**
 
-![Stage](https://img.shields.io/badge/current%20stage-Data%20Engineering%20Foundations-8A6A2F)
-![Projects](https://img.shields.io/badge/projects-2-2E7D32)
+![Stage](https://img.shields.io/badge/current%20stage-AI%20Engineering%20Foundations-8A6A2F)
+![Projects](https://img.shields.io/badge/projects-3-2E7D32)
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![pandas](https://img.shields.io/badge/pandas-150458?logo=pandas&logoColor=white)
 ![Status](https://img.shields.io/badge/status-actively%20building-2E7D32)
@@ -19,8 +19,8 @@
 ## 🧭 The path
 
 ```
-Data Analyst  ──►  Analytics Engineer  ──►  Data Engineer  ──►  AI Engineer
-   ▲ you are here
+Data Analyst  ──►  AI Engineering foundations  ──►  Applied AI Engineer
+                                ▲ you are here
 ```
 
 This repo is the practice ground. Every time I learn something new — a library, a tool, a technique — I build a small, honest project with it and push it here. Each project gets its own numbered folder and its own README, so the commit history shows how I actually learn, not just the polished end result.
@@ -33,6 +33,7 @@ This repo is the practice ground. Every time I learn something new — a library
 |--:|---|---|---|---|
 | 01 | [**Auto Sales — Data Cleaning & Validation**](./01-auto-sales-data-cleaning) | Data Analyst | pandas · deduplication · type validation · quarantine tables · lookup joins · Matplotlib | ✅ Complete |
 | 02 | [**Retail Sales ETL & Data Quality Pipeline**](./02-retail-sales-etl-data-quality) | Data Engineering fundamentals | Python · pandas · CSV/JSON · data-quality checks · logging · exception handling | ✅ Complete |
+| 03 | [**Weather API with `requests`**](./03-api-basics-requests) | AI Engineering foundations | HTTP · `requests` · query parameters · JSON responses · timeouts & error handling | ✅ Complete |
 
 *New rows are added as I build. Newest project goes at the bottom.*
 
@@ -44,11 +45,19 @@ A messy sales export of 2,723 order lines, cleaned with a pipeline where **no ro
 
 ---
 
-### Latest build — 02 · Retail Sales ETL & Data Quality
+### Build 02 · Retail Sales ETL & Data Quality
 
 A deliberately small synthetic retail input (58 rows) becomes two traceable outputs: 53 accepted orders and 3 quarantined orders, after 2 exact duplicates are removed. Practised Python/pandas transformations, CSV/JSON exports, logging, and documenting data-quality decisions without inventing missing quantities or prices.
 
 ➡ [Explore the notebook, architecture and validation notes](./02-retail-sales-etl-data-quality/README.md)
+
+---
+
+### Latest build — 03 · Weather API with `requests`
+
+A deliberately small script that calls the free Open-Meteo weather API and prints Melbourne's current temperature. The location is sent as query parameters, the request has a timeout, the status code is checked, and request errors are caught — so a wrong address or a dead connection prints a clear message instead of crashing. Practised: how a client talks to a server over HTTP, the Python `requests` library, and reading JSON responses.
+
+➡ [Read the build notes](./03-api-basics-requests/README.md)
 
 ---
 
@@ -58,17 +67,18 @@ These are the next steps on the path, not finished work. Each will get its own n
 
 | Stage | Planned practice |
 |---|---|
-| **Data Analyst** | Outlier checks; more cleaning and EDA builds |
-| **Analytics Engineer** | Rebuild project 01 in SQL, then as dbt models with tests (`unique`, `not_null`, `relationships`) |
-| **Data Engineer** | Turn pipeline steps into tested functions (`pytest`) that can run on a schedule |
-| **AI Engineer** | Machine-learning and LLM builds on top of clean, documented data |
+| **Python backend** | Build my own API with FastAPI and Pydantic; test it with `pytest` |
+| **LLM applications** | LLM API calls, structured output, retrieval-augmented generation (RAG) and simple agents |
+| **Ship it** | Docker, cloud deployment and CI/CD — one deployed AI project |
+| **Data side** | Outlier checks; rebuild project 01 in SQL; turn pipeline steps into tested functions |
+| **Machine learning** | scikit-learn and PyTorch builds, including one applied to aerospace data |
 
 ---
 
 ## 🗂 Repository structure
 
 ```
-Data-to-AI/
+Ai-Engineering-Journey/
 ├── README.md                          # this journey map
 ├── 01-auto-sales-data-cleaning/       # Data Analyst stage
 │   ├── README.md
@@ -77,10 +87,11 @@ Data-to-AI/
 │   ├── output/
 │   ├── Mini_Project_1.ipynb
 │   └── requirements.txt
-└── 02-retail-sales-etl-data-quality/  # Python ETL fundamentals
+├── 02-retail-sales-etl-data-quality/  # Python ETL fundamentals
+└── 03-api-basics-requests/            # HTTP, JSON and the requests library
 ```
 
-Each project folder is self-contained: its own README, data, code and `requirements.txt`.
+Each project folder is self-contained: its own README, code and `requirements.txt`.
 
 ---
 
